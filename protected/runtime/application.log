@@ -1,0 +1,23 @@
+2012/09/16 14:06:23 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/yuyu/public_html/restaurant/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/yuyu/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /home/yuyu/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/home/yuyu/publ...')
+#1 /home/yuyu/framework/web/CAssetManager.php(234): CAssetManager->getBasePath()
+#2 /home/yuyu/framework/web/CClientScript.php(463): CAssetManager->publish('/home/yuyu/fram...')
+#3 /home/yuyu/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /home/yuyu/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /home/yuyu/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /home/yuyu/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /home/yuyu/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /home/yuyu/public_html/restaurant/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /home/yuyu/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /home/yuyu/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/yuyu/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /home/yuyu/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/yuyu/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /home/yuyu/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /home/yuyu/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /home/yuyu/public_html/restaurant/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/restaurant/index.php?r=site/login
+HTTP_REFERER=http://localhost/restaurant/
+---
